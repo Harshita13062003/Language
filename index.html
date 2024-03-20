@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> Language App by Harshita </title>
+<style>
+* { font-size:50px;}
+h1 { background-color:black; color:white; width:50%; border-radius:40px;}
+body { background-color:pink; }
+input[type=checkbox] {width:3%; height:0.5em;}
+</style>
+</head>
+<center>
+<h1> Lanuage You know </h1>
+<form onsubmit="show()">
+<input type="text" placeholder="enter name" id="Name"/>
+<br><br>
+<input type="checkbox" id="js" />Javascript
+<input type="checkbox" id="ja" />Java
+<input type="checkbox" id="py" />Python
+<br><br>
+<input type="submit" />
+</form>
+<h2 id="msg" />
+<script>
+function show()
+{
+event.preventDefault();
+let name = document.getElementById("Name");
+let js = document.getElementById("js");
+let ja = document.getElementById("ja");
+let py = document.getElementById("py");
+let msg = document.getElementById("msg");
+let lang = "";
+if (js.checked) lang += "Javascript ";
+if (ja.checked) lang += "Java ";
+if (py.checked) lang += "Python ";
+let ans = "Name = " + name.value + " lang = " + lang;
+msg.innerHTML = ans;
+}
+</script>
+</center>
+</body>
+</html>
